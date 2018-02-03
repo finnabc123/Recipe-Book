@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+      <a class="btn btn-success" [routerLink]="['new']">New Recipe</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <re-recipe-item *ngFor="let recipe of recipes; let i = index" [recipe]="recipe" [recipeId]="i" ></re-recipe-item>
+        <!-- <re-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe" (click)="onSelected(recipe)"></re-recipe-item> -->
+      </ul>
+    </div>
+  </div>
